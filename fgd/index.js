@@ -53,6 +53,7 @@ function main (path, include) {
           }
         })
         if (!attribs.length) attribs = undefined
+        while (items.some(x => x.name === name)) items.splice(items.findIndex(x => x.name === name), 1)
         items.push({ name: name, type: type, description: desc, parameters: attribs })
       } else if (!(line.startsWith('[') || line.startsWith(']'))) {
         let stack = line
