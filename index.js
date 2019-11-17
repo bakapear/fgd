@@ -1,7 +1,7 @@
 let fs = require('fs')
 let fgd = require('./fgd/')
 
-let items = fgd('files/tf.fgd')
+let items = fgd('files/tf-puddy.fgd')
 
 // Apply base to all items and then remove base classes
 for (let i = 0; i < items.length; i++) {
