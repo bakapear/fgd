@@ -16,7 +16,9 @@ for (let i = 0; i < items.length; i++) {
           let prop = props[j]
           if (base[prop]) {
             if (!item[prop]) item[prop] = []
-            item[prop].push(...base[prop])
+            for (let k = 0; k < base[prop].length; k++) {
+              if (!item[prop].some(x => x === base[prop][k])) item[prop].push(base[prop][k])
+            }
           }
         }
       })
@@ -25,6 +27,7 @@ for (let i = 0; i < items.length; i++) {
     }
   }
 }
+
 items = items.filter(x => x.type !== 'BaseClass')
 
 fs.writeFileSync('fgd.json', JSON.stringify(items, null, 2))

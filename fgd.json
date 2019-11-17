@@ -4434,34 +4434,6 @@
           "0": "No",
           "1": "Yes"
         }
-      },
-      {
-        "type": "choices",
-        "name": "renderfx",
-        "title": "Render FX",
-        "deflt": 0,
-        "choices": {
-          "0": "Normal",
-          "1": "Slow Pulse",
-          "2": "Fast Pulse",
-          "3": "Slow Wide Pulse",
-          "4": "Fast Wide Pulse",
-          "5": "Slow Fade Away",
-          "6": "Fast Fade Away",
-          "7": "Slow Become Solid",
-          "8": "Fast Become Solid",
-          "9": "Slow Strobe",
-          "10": "Fast Strobe",
-          "11": "Faster Strobe",
-          "12": "Slow Flicker",
-          "13": "Fast Flicker",
-          "14": "Constant Glow",
-          "15": "Distort",
-          "16": "Hologram (Distort + fade)",
-          "23": "Cull By Distance (TEST)",
-          "24": "Spotlight FX",
-          "26": "Fade Near"
-        }
       }
     ],
     "inputs": [
@@ -29724,12 +29696,6 @@
         "deflt": ""
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
         "type": "origin",
         "name": "origin",
         "title": "Origin (X Y Z)",
@@ -29803,16 +29769,6 @@
           "23": "Cull By Distance (TEST)",
           "24": "Spotlight FX",
           "26": "Fade Near"
-        }
-      },
-      {
-        "type": "choices",
-        "name": "disableshadows",
-        "title": "Disable shadows",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
         }
       }
     ],
@@ -30050,41 +30006,6 @@
         "type": "void"
       },
       {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
         "name": "Alpha",
         "description": "Set the sprite's alpha (0 - 255).",
         "type": "integer"
@@ -30093,16 +30014,6 @@
         "name": "Color",
         "description": "Set the sprite's color (R G B).",
         "type": "color255"
-      },
-      {
-        "name": "DisableShadow",
-        "description": "Turn shadow off.",
-        "type": "void"
-      },
-      {
-        "name": "EnableShadow",
-        "description": "Turn shadow on.",
-        "type": "void"
       }
     ],
     "outputs": [
@@ -30184,26 +30095,6 @@
       {
         "name": "OnPhysCannonAnimatePostStarted",
         "description": "Fired when this prop starts playing the Post physcannon-pull activity. Only fired if the ACT_PHYSCANNON_ANIMATE_POST activity is defined in the model this breakable is using.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       },
       {
@@ -34917,12 +34808,6 @@
         "deflt": ""
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
         "type": "target_destination",
         "name": "damagefilter",
         "title": "Damage Filter",
@@ -35162,41 +35047,6 @@
         "type": "float"
       },
       {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
         "name": "SetDamageFilter",
         "description": "Sets the entity to use as damage filter. Pass in an empty string to clear the damage filter.",
         "type": "string"
@@ -35394,26 +35244,6 @@
         "name": "OnPhysCannonAnimatePostStarted",
         "description": "Fired when this prop starts playing the Post physcannon-pull activity. Only fired if the ACT_PHYSCANNON_ANIMATE_POST activity is defined in the model this breakable is using.",
         "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
       }
     ]
   },
@@ -35609,41 +35439,6 @@
         "name": "SetMass",
         "description": "Set mass of this object.",
         "type": "float"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
       },
       {
         "name": "SetDamageFilter",
@@ -35844,12 +35639,6 @@
         "title": "Break Model Message",
         "description": "If set, will use this break model message instead of the normal break behavior.",
         "deflt": ""
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
       },
       {
         "type": "target_destination",
@@ -36170,26 +35959,6 @@
       {
         "name": "OnPhysCannonAnimatePostStarted",
         "description": "Fired when this prop starts playing the Post physcannon-pull activity. Only fired if the ACT_PHYSCANNON_ANIMATE_POST activity is defined in the model this breakable is using.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       }
     ]
@@ -36403,12 +36172,6 @@
         "deflt": ""
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
         "type": "target_destination",
         "name": "damagefilter",
         "title": "Damage Filter",
@@ -36728,26 +36491,6 @@
         "name": "OnPhysCannonAnimatePostStarted",
         "description": "Fired when this prop starts playing the Post physcannon-pull activity. Only fired if the ACT_PHYSCANNON_ANIMATE_POST activity is defined in the model this breakable is using.",
         "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
       }
     ],
     "inputs": [
@@ -36920,41 +36663,6 @@
         "name": "SetMass",
         "description": "Set mass of this object.",
         "type": "float"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
       },
       {
         "name": "SetDamageFilter",
@@ -38427,16 +38135,6 @@
           "24": "Spotlight FX",
           "26": "Fade Near"
         }
-      },
-      {
-        "type": "choices",
-        "name": "disableshadows",
-        "title": "Disable shadows",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
       }
     ],
     "flags": [
@@ -38658,16 +38356,6 @@
         "name": "Color",
         "description": "Set the sprite's color (R G B).",
         "type": "color255"
-      },
-      {
-        "name": "DisableShadow",
-        "description": "Turn shadow off.",
-        "type": "void"
-      },
-      {
-        "name": "EnableShadow",
-        "description": "Turn shadow on.",
-        "type": "void"
       }
     ]
   },
@@ -39033,16 +38721,6 @@
           "24": "Spotlight FX",
           "26": "Fade Near"
         }
-      },
-      {
-        "type": "choices",
-        "name": "disableshadows",
-        "title": "Disable shadows",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
       }
     ],
     "inputs": [
@@ -39175,16 +38853,6 @@
         "name": "Color",
         "description": "Set the sprite's color (R G B).",
         "type": "color255"
-      },
-      {
-        "name": "DisableShadow",
-        "description": "Turn shadow off.",
-        "type": "void"
-      },
-      {
-        "name": "EnableShadow",
-        "description": "Turn shadow on.",
-        "type": "void"
       }
     ],
     "outputs": [
@@ -42628,34 +42296,6 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
@@ -42760,26 +42400,6 @@
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
         "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
       }
     ],
     "inputs": [
@@ -42856,71 +42476,6 @@
       {
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
         "type": "void"
       }
     ]
@@ -43037,34 +42592,6 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
@@ -43111,26 +42638,6 @@
       {
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       }
     ],
@@ -43209,71 +42716,6 @@
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
         "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
-        "type": "void"
       }
     ]
   },
@@ -43320,34 +42762,6 @@
         "name": "filtername",
         "title": "Filter Name",
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
       },
       {
         "type": "string",
@@ -43454,26 +42868,6 @@
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
         "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
       }
     ],
     "inputs": [
@@ -43550,71 +42944,6 @@
       {
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
         "type": "void"
       }
     ]
@@ -43730,45 +43059,11 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
         "description": "Name by which this entity is linked to another entity in a different map. When the player transitions to a new map, entities in the new map with globalnames matching entities in the previous map will have the previous map's state copied over their state.",
         "deflt": ""
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
       }
     ],
     "inputs": [
@@ -43851,106 +43146,6 @@
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
         "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
       }
     ],
     "outputs": [
@@ -44002,46 +43197,6 @@
       {
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       }
     ],
@@ -44152,46 +43307,6 @@
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
         "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
       }
     ],
     "properties": [
@@ -44230,45 +43345,11 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
         "description": "Name by which this entity is linked to another entity in a different map. When the player transitions to a new map, entities in the new map with globalnames matching entities in the previous map will have the previous map's state copied over their state.",
         "deflt": ""
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
       }
     ],
     "flags": [
@@ -44403,106 +43484,6 @@
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
         "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
       }
     ]
   },
@@ -44551,34 +43532,6 @@
         "name": "filtername",
         "title": "Filter Name",
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
       },
       {
         "type": "string",
@@ -44668,71 +43621,6 @@
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
         "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
-        "type": "void"
       }
     ],
     "outputs": [
@@ -44789,26 +43677,6 @@
       {
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       }
     ],
@@ -45213,34 +44081,6 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
@@ -45297,26 +44137,6 @@
       {
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       }
     ],
@@ -45395,71 +44215,6 @@
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
         "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
-        "type": "void"
       }
     ]
   },
@@ -45522,34 +44277,6 @@
         "name": "filtername",
         "title": "Filter Name",
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
       },
       {
         "type": "string",
@@ -45666,26 +44393,6 @@
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
         "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
       }
     ],
     "inputs": [
@@ -45763,71 +44470,6 @@
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
         "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
-        "type": "void"
       }
     ]
   },
@@ -45904,34 +44546,6 @@
         "name": "filtername",
         "title": "Filter Name",
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
       },
       {
         "type": "string",
@@ -46027,71 +44641,6 @@
       {
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
         "type": "void"
       }
     ],
@@ -46191,26 +44740,6 @@
       {
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       }
     ]
@@ -46389,34 +44918,6 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
@@ -46468,26 +44969,6 @@
       {
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       }
     ],
@@ -46623,71 +45104,6 @@
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
         "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
-        "type": "void"
       }
     ]
   },
@@ -46741,34 +45157,6 @@
         "name": "filtername",
         "title": "Filter Name",
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
       },
       {
         "type": "string",
@@ -46880,26 +45268,6 @@
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
         "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
       }
     ],
     "inputs": [
@@ -46977,71 +45345,6 @@
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
         "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
-        "type": "void"
       }
     ]
   },
@@ -47090,34 +45393,6 @@
         "name": "filtername",
         "title": "Filter Name",
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
       },
       {
         "type": "string",
@@ -47224,26 +45499,6 @@
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
         "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
       }
     ],
     "inputs": [
@@ -47320,71 +45575,6 @@
       {
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
         "type": "void"
       }
     ]
@@ -50145,12 +48335,6 @@
         }
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
         "type": "target_destination",
         "name": "parentname",
         "title": "Parent",
@@ -50389,41 +48573,6 @@
         "type": "void"
       },
       {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
         "name": "SetParent",
         "description": "Changes the entity's parent in the movement hierarchy.",
         "type": "string"
@@ -50635,26 +48784,6 @@
       {
         "name": "OnForcedInteractionFinished",
         "description": "NPCs in actbusies can no longer perform dynamic interactions.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       },
       {
@@ -51067,34 +49196,6 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
@@ -51181,71 +49282,6 @@
       {
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
         "type": "void"
       }
     ],
@@ -51345,26 +49381,6 @@
       {
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       }
     ]
@@ -57008,45 +55024,11 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
         "description": "Name by which this entity is linked to another entity in a different map. When the player transitions to a new map, entities in the new map with globalnames matching entities in the previous map will have the previous map's state copied over their state.",
         "deflt": ""
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
       },
       {
         "type": "choices",
@@ -57058,16 +55040,6 @@
           "0": "Any",
           "2": "Red",
           "3": "Blue"
-        }
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
         }
       }
     ],
@@ -57168,46 +55140,6 @@
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
         "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
       }
     ],
     "inputs": [
@@ -57287,119 +55219,9 @@
         "type": "void"
       },
       {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
         "name": "SetTeam",
         "description": "Changes the entity's team.",
         "type": "integer"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
-        "type": "void"
       },
       {
         "name": "Toggle",
@@ -61617,18 +59439,6 @@
         "description": "The name that other entities refer to this entity by."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
         "type": "origin",
         "name": "origin",
         "title": "Origin (X Y Z)",
@@ -61649,34 +59459,6 @@
         "name": "filtername",
         "title": "Filter Name",
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
       },
       {
         "type": "string",
@@ -61748,61 +59530,6 @@
         "type": "void"
       },
       {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
         "name": "Enable",
         "description": "Enable this entity.",
         "type": "void"
@@ -61815,71 +59542,6 @@
       {
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
         "type": "void"
       }
     ],
@@ -61920,48 +59582,8 @@
         "type": "void"
       },
       {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
-      },
-      {
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       }
     ],
@@ -64294,46 +61916,6 @@
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
         "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
       }
     ],
     "properties": [
@@ -64372,45 +61954,11 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
         "description": "Name by which this entity is linked to another entity in a different map. When the player transitions to a new map, entities in the new map with globalnames matching entities in the previous map will have the previous map's state copied over their state.",
         "deflt": ""
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
       },
       {
         "type": "choices",
@@ -64556,106 +62104,6 @@
       {
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
         "type": "void"
       },
       {
@@ -66887,45 +64335,11 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
         "description": "Name by which this entity is linked to another entity in a different map. When the player transitions to a new map, entities in the new map with globalnames matching entities in the previous map will have the previous map's state copied over their state.",
         "deflt": ""
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
       }
     ],
     "inputs": [
@@ -67012,106 +64426,6 @@
       {
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
         "type": "void"
       }
     ],
@@ -67211,46 +64525,6 @@
       {
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       }
     ]
@@ -67458,45 +64732,11 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
         "description": "Name by which this entity is linked to another entity in a different map. When the player transitions to a new map, entities in the new map with globalnames matching entities in the previous map will have the previous map's state copied over their state.",
         "deflt": ""
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
       }
     ],
     "outputs": [
@@ -67543,46 +64783,6 @@
       {
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       }
     ],
@@ -67717,106 +64917,6 @@
       {
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
         "type": "void"
       }
     ]
@@ -69156,57 +66256,11 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
         "description": "Name by which this entity is linked to another entity in a different map. When the player transitions to a new map, entities in the new map with globalnames matching entities in the previous map will have the previous map's state copied over their state.",
         "deflt": ""
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
       }
     ],
     "flags": [
@@ -69306,46 +66360,6 @@
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
         "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
       }
     ],
     "inputs": [
@@ -69422,126 +66436,6 @@
       {
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
         "type": "void"
       }
     ]
@@ -70198,34 +67092,6 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
@@ -70328,26 +67194,6 @@
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
         "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
       }
     ],
     "inputs": [
@@ -70439,71 +67285,6 @@
       {
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
         "type": "void"
       }
     ],
@@ -70623,34 +67404,6 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
@@ -70755,26 +67508,6 @@
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
         "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
       }
     ],
     "inputs": [
@@ -70851,71 +67584,6 @@
       {
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
         "type": "void"
       }
     ]
@@ -71083,34 +67751,6 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
@@ -71333,26 +67973,6 @@
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
         "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
       }
     ],
     "inputs": [
@@ -71429,71 +68049,6 @@
       {
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
         "type": "void"
       }
     ]
@@ -71538,34 +68093,6 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
@@ -71788,26 +68315,6 @@
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
         "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
       }
     ],
     "inputs": [
@@ -71884,71 +68391,6 @@
       {
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
         "type": "void"
       }
     ]
@@ -72362,55 +68804,11 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
         "description": "Name by which this entity is linked to another entity in a different map. When the player transitions to a new map, entities in the new map with globalnames matching entities in the previous map will have the previous map's state copied over their state.",
         "deflt": ""
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
       }
     ],
     "inputs": [
@@ -72507,116 +68905,6 @@
       {
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
         "type": "void"
       },
       {
@@ -72721,46 +69009,6 @@
       {
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       }
     ]
@@ -73287,12 +69535,6 @@
         "title": "Sudden Death Time",
         "description": "Time til sudden death starts (-1 for sudden death)",
         "deflt": -1
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
       }
     ],
     "inputs": [
@@ -73380,41 +69622,6 @@
         "name": "ChangeHudResFile",
         "description": "Change the HUD resource file.",
         "type": "string"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
       }
     ],
     "outputs": [
@@ -73471,26 +69678,6 @@
       {
         "name": "OnSuddenDeathStart",
         "description": "Sent when sudden death starts.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       }
     ]
@@ -73571,41 +69758,6 @@
         "type": "void"
       },
       {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
         "name": "ScoreTeamRed",
         "description": "Give points to team RED",
         "type": "integer"
@@ -73624,41 +69776,6 @@
         "name": "ChangeHudResFile",
         "description": "Change the HUD resource file.",
         "type": "string"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
       }
     ],
     "outputs": [
@@ -73670,26 +69787,6 @@
       {
         "name": "OutputRemovePlatform",
         "description": "Sends the index of the platform that shouldn't come back.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       },
       {
@@ -73746,26 +69843,6 @@
         "name": "OnSuddenDeathStart",
         "description": "Sent when sudden death starts.",
         "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
       }
     ],
     "properties": [
@@ -73786,12 +69863,6 @@
           "2": "Halloween Platforms",
           "3": "Halloween Soccer"
         }
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
       },
       {
         "type": "target_source",
@@ -73863,12 +69934,6 @@
         "title": "Sudden Death Time",
         "description": "Time til sudden death starts (-1 for sudden death)",
         "deflt": -1
-      },
-      {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
       }
     ]
   },
@@ -74945,34 +71010,6 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
@@ -75024,26 +71061,6 @@
       {
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       }
     ],
@@ -75178,71 +71195,6 @@
       {
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
         "type": "void"
       }
     ]
@@ -75315,34 +71267,6 @@
         "description": "Filter to use to see if activator triggers me. See filter_activator_name for more explanation."
       },
       {
-        "type": "target_source",
-        "name": "targetname",
-        "title": "Name",
-        "description": "The name that other entities refer to this entity by."
-      },
-      {
-        "type": "target_destination",
-        "name": "parentname",
-        "title": "Parent",
-        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
-      },
-      {
-        "type": "origin",
-        "name": "origin",
-        "title": "Origin (X Y Z)",
-        "description": "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
-      },
-      {
-        "type": "choices",
-        "name": "StartDisabled",
-        "title": "Start Disabled",
-        "deflt": 0,
-        "choices": {
-          "0": "No",
-          "1": "Yes"
-        }
-      },
-      {
         "type": "string",
         "name": "globalname",
         "title": "Global Entity Name",
@@ -75447,26 +71371,6 @@
         "name": "OnStartTouch",
         "description": "Fired when an entity starts touching this trigger. The touching entity must pass this trigger's filters to cause this output to fire.",
         "type": "void"
-      },
-      {
-        "name": "OnUser1",
-        "description": "Fired in response to FireUser1 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser2",
-        "description": "Fired in response to FireUser2 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser3",
-        "description": "Fired in response to FireUser3 input.",
-        "type": "void"
-      },
-      {
-        "name": "OnUser4",
-        "description": "Fired in response to FireUser4 input.",
-        "type": "void"
       }
     ],
     "inputs": [
@@ -75543,71 +71447,6 @@
       {
         "name": "Toggle",
         "description": "Toggles this trigger between enabled and disabled states.",
-        "type": "void"
-      },
-      {
-        "name": "Kill",
-        "description": "Removes this entity from the world.",
-        "type": "void"
-      },
-      {
-        "name": "KillHierarchy",
-        "description": "Removes this entity and all its children from the world.",
-        "type": "void"
-      },
-      {
-        "name": "AddOutput",
-        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
-        "type": "string"
-      },
-      {
-        "name": "FireUser1",
-        "description": "Causes this entity's OnUser1 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser2",
-        "description": "Causes this entity's OnUser2 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser3",
-        "description": "Causes this entity's OnUser3 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "FireUser4",
-        "description": "Causes this entity's OnUser4 output to be fired.",
-        "type": "void"
-      },
-      {
-        "name": "SetParent",
-        "description": "Changes the entity's parent in the movement hierarchy.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachment",
-        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
-        "type": "string"
-      },
-      {
-        "name": "SetParentAttachmentMaintainOffset",
-        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
-        "type": "string"
-      },
-      {
-        "name": "ClearParent",
-        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
-        "type": "void"
-      },
-      {
-        "name": "Enable",
-        "description": "Enable this entity.",
-        "type": "void"
-      },
-      {
-        "name": "Disable",
-        "description": "Disable this entity.",
         "type": "void"
       }
     ]
