@@ -8374,12 +8374,61 @@
         "title": "Sound Position 7",
         "description": "A sound position that will be referenced inside the soundscape text file. Usually used to position a set of sounds within the world.",
         "deflt": ""
+      },
+      {
+        "type": "target_source",
+        "name": "targetname",
+        "title": "Name",
+        "description": "The name that other entities refer to this entity by."
+      },
+      {
+        "type": "string",
+        "name": "effects",
+        "title": "Effect flags",
+        "description": "For configuring visual effects.",
+        "deflt": "0"
+      },
+      {
+        "type": "target_destination",
+        "name": "parentname",
+        "title": "Parent",
+        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
+      },
+      {
+        "type": "choices",
+        "name": "StartDisabled",
+        "title": "Start Disabled",
+        "deflt": 0,
+        "choices": {
+          "0": "No",
+          "1": "Yes"
+        }
       }
     ],
     "outputs": [
       {
         "name": "OnPlay",
         "description": "Fired when this soundscape becomes the active one.",
+        "type": "void"
+      },
+      {
+        "name": "OnUser1",
+        "description": "Fired in response to FireUser1 input.",
+        "type": "void"
+      },
+      {
+        "name": "OnUser2",
+        "description": "Fired in response to FireUser2 input.",
+        "type": "void"
+      },
+      {
+        "name": "OnUser3",
+        "description": "Fired in response to FireUser3 input.",
+        "type": "void"
+      },
+      {
+        "name": "OnUser4",
+        "description": "Fired in response to FireUser4 input.",
         "type": "void"
       }
     ],
@@ -8397,6 +8446,71 @@
       {
         "name": "ToggleEnabled",
         "description": "Toggle the soundscape enabled state.",
+        "type": "void"
+      },
+      {
+        "name": "Kill",
+        "description": "Removes this entity from the world.",
+        "type": "void"
+      },
+      {
+        "name": "KillHierarchy",
+        "description": "Removes this entity and all its children from the world.",
+        "type": "void"
+      },
+      {
+        "name": "AddOutput",
+        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
+        "type": "string"
+      },
+      {
+        "name": "FireUser1",
+        "description": "Causes this entity's OnUser1 output to be fired.",
+        "type": "void"
+      },
+      {
+        "name": "FireUser2",
+        "description": "Causes this entity's OnUser2 output to be fired.",
+        "type": "void"
+      },
+      {
+        "name": "FireUser3",
+        "description": "Causes this entity's OnUser3 output to be fired.",
+        "type": "void"
+      },
+      {
+        "name": "FireUser4",
+        "description": "Causes this entity's OnUser4 output to be fired.",
+        "type": "void"
+      },
+      {
+        "name": "SetParent",
+        "description": "Changes the entity's parent in the movement hierarchy.",
+        "type": "string"
+      },
+      {
+        "name": "SetParentAttachment",
+        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
+        "type": "string"
+      },
+      {
+        "name": "SetParentAttachmentMaintainOffset",
+        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
+        "type": "string"
+      },
+      {
+        "name": "ClearParent",
+        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
+        "type": "void"
+      },
+      {
+        "name": "Enable",
+        "description": "Enable this entity.",
+        "type": "void"
+      },
+      {
+        "name": "Disable",
+        "description": "Disable this entity.",
         "type": "void"
       }
     ]
@@ -42644,6 +42758,615 @@
         "title": "Custom collision with grenades and sticky bombs",
         "value": 512,
         "enabled": false
+      },
+      {
+        "title": "Use Hitboxes for Renderbox",
+        "value": 64,
+        "enabled": false
+      },
+      {
+        "title": "Start with collision disabled",
+        "value": 256,
+        "enabled": false
+      },
+      {
+        "title": "Break on Touch",
+        "value": 16,
+        "enabled": false
+      },
+      {
+        "title": "Break on Pressure",
+        "value": 32,
+        "enabled": false
+      }
+    ],
+    "properties": [
+      {
+        "type": "choices",
+        "name": "solid",
+        "title": "Collisions",
+        "deflt": 6,
+        "choices": {
+          "0": "Not Solid",
+          "2": "Use Bounding Box",
+          "6": "Use VPhysics"
+        }
+      },
+      {
+        "type": "string",
+        "name": "DefaultAnim",
+        "title": "Default Animation",
+        "description": "The name of the idle animation that this prop will revert to whenever it finishes a random or forced animation.",
+        "deflt": ""
+      },
+      {
+        "type": "choices",
+        "name": "RandomAnimation",
+        "title": "Randomly Animate",
+        "description": "If set, this prop will randomly choose and play animations, based upon the times specified in 'Min/Max Random Anim Time'. Inbetween the random animations, it will revert to playing the 'Default Animation'.",
+        "deflt": 0,
+        "choices": {
+          "0": "No",
+          "1": "Yes"
+        }
+      },
+      {
+        "type": "float",
+        "name": "MinAnimTime",
+        "title": "Min Random Anim Time",
+        "description": "Minimum time between random animations.",
+        "deflt": "5"
+      },
+      {
+        "type": "float",
+        "name": "MaxAnimTime",
+        "title": "Max Random Anim Time",
+        "description": "Maximum time between random animations.",
+        "deflt": "10"
+      },
+      {
+        "type": "integer",
+        "name": "SetBodyGroup",
+        "title": "Body Group",
+        "deflt": 0
+      },
+      {
+        "type": "choices",
+        "name": "DisableBoneFollowers",
+        "title": "Disable Bone Followers",
+        "description": "If set, this prop won't generate bone followers, even if they're listed in the model's .qc",
+        "deflt": 0,
+        "choices": {
+          "0": "No",
+          "1": "Yes"
+        }
+      },
+      {
+        "type": "target_destination",
+        "name": "lightingorigin",
+        "title": "Lighting Origin",
+        "description": "Select a path_corner entity to specify a location to sample lighting from, instead of using this entity's origin.",
+        "deflt": ""
+      },
+      {
+        "type": "target_destination",
+        "name": "parentname",
+        "title": "Parent",
+        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
+      },
+      {
+        "type": "string",
+        "name": "globalname",
+        "title": "Global Entity Name",
+        "description": "Name by which this entity is linked to another entity in a different map. When the player transitions to a new map, entities in the new map with globalnames matching entities in the previous map will have the previous map's state copied over their state.",
+        "deflt": ""
+      },
+      {
+        "type": "angle",
+        "name": "angles",
+        "title": "Pitch Yaw Roll (Y Z X)",
+        "description": "This entity's orientation in the world. Pitch is rotation around the Y axis, yaw is the rotation around the Z axis, roll is the rotation around the X axis.",
+        "deflt": "0 0 0"
+      },
+      {
+        "type": "studio",
+        "name": "model",
+        "title": "World Model"
+      },
+      {
+        "type": "integer",
+        "name": "skin",
+        "title": "Skin",
+        "description": "Some models have multiple versions of their textures, called skins. Set this to a number other than 0 to use that skin instead of the default.",
+        "deflt": 0
+      },
+      {
+        "type": "float",
+        "name": "modelscale",
+        "title": "Model Scale",
+        "description": "A multiplier for the size of the model.",
+        "deflt": "1.0"
+      },
+      {
+        "type": "choices",
+        "name": "disableshadows",
+        "title": "Disable Shadows",
+        "description": "Used to disable dynamic shadows on this entity.",
+        "deflt": 0,
+        "choices": {
+          "0": "No",
+          "1": "Yes"
+        }
+      },
+      {
+        "type": "float",
+        "name": "pressuredelay",
+        "title": "Pressure Delay",
+        "description": "Delay, in seconds, after 'broken' by pressure before breaking apart (allows for sound to play before breaking apart).",
+        "deflt": 0
+      },
+      {
+        "type": "float",
+        "name": "ExplodeDamage",
+        "title": "Explosion Damage",
+        "description": "If non-zero, when this entity breaks it will create an explosion that causes the specified amount of damage. See also 'Explosion Radius'.",
+        "deflt": 0
+      },
+      {
+        "type": "float",
+        "name": "ExplodeRadius",
+        "title": "Explosion Radius",
+        "description": "If non-zero, when this entity breaks it will create an explosion with a radius of the specified amount. See also 'Explosion Damage'.",
+        "deflt": 0
+      },
+      {
+        "type": "choices",
+        "name": "PerformanceMode",
+        "title": "Performance Mode",
+        "description": "Used to limit the amount of gibs produced when this entity breaks, for performance reasons.",
+        "deflt": 0,
+        "choices": {
+          "0": "Normal",
+          "1": "No Gibs",
+          "2": "Full Gibs on All Platforms",
+          "3": "Reduced gibs"
+        }
+      },
+      {
+        "type": "string",
+        "name": "BreakModelMessage",
+        "title": "Break Model Message",
+        "description": "If set, will use this break model message instead of the normal break behavior.",
+        "deflt": ""
+      },
+      {
+        "type": "target_source",
+        "name": "targetname",
+        "title": "Name",
+        "description": "The name that other entities refer to this entity by."
+      },
+      {
+        "type": "string",
+        "name": "effects",
+        "title": "Effect flags",
+        "description": "For configuring visual effects.",
+        "deflt": "0"
+      },
+      {
+        "type": "target_destination",
+        "name": "damagefilter",
+        "title": "Damage Filter",
+        "description": "Name of the filter entity that controls which entities can damage us.",
+        "deflt": ""
+      },
+      {
+        "type": "choices",
+        "name": "disableshadows",
+        "title": "Disable shadows",
+        "deflt": 0,
+        "choices": {
+          "0": "No",
+          "1": "Yes"
+        }
+      },
+      {
+        "type": "choices",
+        "name": "mindxlevel",
+        "title": "Minimum DX Level",
+        "deflt": 0,
+        "choices": {
+          "0": "default (lowest)",
+          "70": "dx7",
+          "80": "dx8.0 (4600Ti)",
+          "81": "dx8.1 (FX5200)",
+          "90": "dx9 SM2.0",
+          "95": "dx9 SM3.0"
+        }
+      },
+      {
+        "type": "choices",
+        "name": "maxdxlevel",
+        "title": "Maximum DX Level",
+        "deflt": 0,
+        "choices": {
+          "0": "default (highest)",
+          "60": "dx6",
+          "70": "dx7",
+          "80": "dx8.0 (4600Ti)",
+          "81": "dx8.1 (FX5200)",
+          "90": "dx9 SM2.0",
+          "95": "dx9 SM3.0"
+        }
+      },
+      {
+        "type": "float",
+        "name": "fademindist",
+        "title": "Start Fade Dist",
+        "description": "Distance at which the prop starts to fade (<0 = use fademaxdist).",
+        "deflt": -1
+      },
+      {
+        "type": "float",
+        "name": "fademaxdist",
+        "title": "End Fade Dist",
+        "description": "Max fade distance at which the prop is visible (0 = don't fade out)",
+        "deflt": 0
+      },
+      {
+        "type": "float",
+        "name": "fadescale",
+        "title": "Fade Scale",
+        "description": "If you specify a fade in the worldspawn, or if the engine is running under dx7, then the engine will forcibly fade out props even if fademindist/fademaxdist isn't specified. This scale factor gives you some control over the fade. Using 0 here turns off the forcible fades. Numbers smaller than 1 cause the prop to fade out at further distances, and greater than 1 cause it to fade out at closer distances.",
+        "deflt": 1
+      },
+      {
+        "type": "choices",
+        "name": "rendermode",
+        "title": "Render Mode",
+        "description": "Used to set a non-standard rendering mode on this entity. See also 'FX Amount' and 'FX Color'.",
+        "deflt": 0,
+        "choices": {
+          "0": "Normal",
+          "1": "Color",
+          "2": "Texture",
+          "3": "Glow",
+          "4": "Solid",
+          "5": "Additive",
+          "7": "Additive Fractional Frame",
+          "9": "World Space Glow",
+          "10": "Dont Render"
+        }
+      },
+      {
+        "type": "integer",
+        "name": "renderamt",
+        "title": "FX Amount (0 - 255)",
+        "description": "The FX amount is used by the selected Render Mode.",
+        "deflt": 255
+      },
+      {
+        "type": "color255",
+        "name": "rendercolor",
+        "title": "FX Color (R G B)",
+        "description": "The FX color is used by the selected Render Mode.",
+        "deflt": "255 255 255"
+      },
+      {
+        "type": "choices",
+        "name": "disablereceiveshadows",
+        "title": "Disable Receiving Shadows",
+        "deflt": 0,
+        "choices": {
+          "0": "No",
+          "1": "Yes"
+        }
+      },
+      {
+        "type": "choices",
+        "name": "renderfx",
+        "title": "Render FX",
+        "deflt": 0,
+        "choices": {
+          "0": "Normal",
+          "1": "Slow Pulse",
+          "2": "Fast Pulse",
+          "3": "Slow Wide Pulse",
+          "4": "Fast Wide Pulse",
+          "5": "Slow Fade Away",
+          "6": "Fast Fade Away",
+          "7": "Slow Become Solid",
+          "8": "Fast Become Solid",
+          "9": "Slow Strobe",
+          "10": "Fast Strobe",
+          "11": "Faster Strobe",
+          "12": "Slow Flicker",
+          "13": "Fast Flicker",
+          "14": "Constant Glow",
+          "15": "Distort",
+          "16": "Hologram (Distort + fade)",
+          "23": "Cull By Distance (TEST)",
+          "24": "Spotlight FX",
+          "26": "Fade Near"
+        }
+      },
+      {
+        "type": "choices",
+        "name": "StartDisabled",
+        "title": "Start Disabled",
+        "deflt": 0,
+        "choices": {
+          "0": "No",
+          "1": "Yes"
+        }
+      }
+    ],
+    "outputs": [
+      {
+        "name": "OnAnimationBegun",
+        "description": "Fired whenever a new animation has begun playing.",
+        "type": "void"
+      },
+      {
+        "name": "OnAnimationDone",
+        "description": "Fired whenever an animation is complete.",
+        "type": "void"
+      },
+      {
+        "name": "OnIgnite",
+        "description": "Fired when this object catches fire.",
+        "type": "void"
+      },
+      {
+        "name": "OnBreak",
+        "description": "Fired when this breakable breaks.",
+        "type": "void"
+      },
+      {
+        "name": "OnTakeDamage",
+        "description": "Fired each time this breakable takes any damage.",
+        "type": "void"
+      },
+      {
+        "name": "OnHealthChanged",
+        "description": "Fired when the health of this breakable changes, passing the new value of health as a percentage of max health, from [0..1].",
+        "type": "float"
+      },
+      {
+        "name": "OnPhysCannonDetach",
+        "description": "Fired when the physcannon has ripped this breakable off of the wall. Only fired if ACT_PHYSCANNON_DETACH is defined in the model this breakable is using.",
+        "type": "void"
+      },
+      {
+        "name": "OnPhysCannonAnimatePreStarted",
+        "description": "Fired when this prop starts playing the Pre physcannon-pull activity, caused by the player trying to grab this prop with the physcannon. Only fired if the ACT_PHYSCANNON_ANIMATE_PRE activity is defined in the model this breakable is using.",
+        "type": "void"
+      },
+      {
+        "name": "OnPhysCannonAnimatePullStarted",
+        "description": "Fired when this prop starts playing the physcannon-pull activity, caused by the player trying to grab this prop with the physcannon. Only fired if the ACT_PHYSCANNON_ANIMATE activity is defined in the model this breakable is using. If the prop has Pre pull anim, this will be fired after the Pre anim has finished playing.",
+        "type": "void"
+      },
+      {
+        "name": "OnPhysCannonPullAnimFinished",
+        "description": "Fired when this prop has finished playing the physcannon-pull activity, caused by the player trying to grab this prop with the physcannon. Only fired if the ACT_PHYSCANNON_ANIMATE activity is defined in the model this breakable is using. If the prop has Pre & Post pull anims, this will be fired after the Post anim has finished playing.",
+        "type": "void"
+      },
+      {
+        "name": "OnPhysCannonAnimatePostStarted",
+        "description": "Fired when this prop starts playing the Post physcannon-pull activity. Only fired if the ACT_PHYSCANNON_ANIMATE_POST activity is defined in the model this breakable is using.",
+        "type": "void"
+      },
+      {
+        "name": "OnUser1",
+        "description": "Fired in response to FireUser1 input.",
+        "type": "void"
+      },
+      {
+        "name": "OnUser2",
+        "description": "Fired in response to FireUser2 input.",
+        "type": "void"
+      },
+      {
+        "name": "OnUser3",
+        "description": "Fired in response to FireUser3 input.",
+        "type": "void"
+      },
+      {
+        "name": "OnUser4",
+        "description": "Fired in response to FireUser4 input.",
+        "type": "void"
+      }
+    ],
+    "inputs": [
+      {
+        "name": "SetAnimation",
+        "description": "Force the prop to play an animation. The parameter should be the name of the animation.",
+        "type": "string"
+      },
+      {
+        "name": "SetDefaultAnimation",
+        "description": "Set the Default Animation to the one specified in the parameter.",
+        "type": "string"
+      },
+      {
+        "name": "SetPlaybackRate",
+        "description": "Set the playback rate for the animation.",
+        "type": "float"
+      },
+      {
+        "name": "SetBodyGroup",
+        "description": "Set the visible bodygroup, by index.",
+        "type": "integer"
+      },
+      {
+        "name": "TurnOn",
+        "description": "Make the prop visible.",
+        "type": "void"
+      },
+      {
+        "name": "TurnOff",
+        "description": "Make the prop invisible.",
+        "type": "void"
+      },
+      {
+        "name": "EnableCollision",
+        "description": "Enable collision on the prop.",
+        "type": "void"
+      },
+      {
+        "name": "DisableCollision",
+        "description": "Disable collision on the prop.",
+        "type": "void"
+      },
+      {
+        "name": "SetParent",
+        "description": "Changes the entity's parent in the movement hierarchy.",
+        "type": "string"
+      },
+      {
+        "name": "SetParentAttachment",
+        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
+        "type": "string"
+      },
+      {
+        "name": "SetParentAttachmentMaintainOffset",
+        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
+        "type": "string"
+      },
+      {
+        "name": "ClearParent",
+        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
+        "type": "void"
+      },
+      {
+        "name": "Skin",
+        "description": "Changes the model skin to the specified number.",
+        "type": "integer"
+      },
+      {
+        "name": "DisableShadow",
+        "description": "Turn shadow off.",
+        "type": "void"
+      },
+      {
+        "name": "EnableShadow",
+        "description": "Turn shadow on.",
+        "type": "void"
+      },
+      {
+        "name": "AlternativeSorting",
+        "description": "Used to attempt to fix sorting problems when rendering. True activates, false deactivates",
+        "type": "bool"
+      },
+      {
+        "name": "SetModelScale",
+        "description": "Takes two values separated by a space. The first is the target model scale. The second value is the number of seconds the change in scale will be spread over.",
+        "type": "string"
+      },
+      {
+        "name": "Break",
+        "description": "Breaks the breakable.",
+        "type": "void"
+      },
+      {
+        "name": "SetHealth",
+        "description": "Sets a new value for the breakable's health. If the breakable's health reaches zero it will break.",
+        "type": "integer"
+      },
+      {
+        "name": "AddHealth",
+        "description": "Adds health to the breakable. If the breakable's health reaches zero it will break.",
+        "type": "integer"
+      },
+      {
+        "name": "RemoveHealth",
+        "description": "Removes health from the breakable. If the breakable's health reaches zero it will break.",
+        "type": "integer"
+      },
+      {
+        "name": "EnablePhyscannonPickup",
+        "description": "Makes the breakable able to picked up by the physcannon.",
+        "type": "void"
+      },
+      {
+        "name": "DisablePhyscannonPickup",
+        "description": "Makes the breakable not able to picked up by the physcannon.",
+        "type": "void"
+      },
+      {
+        "name": "SetMass",
+        "description": "Set mass of this object.",
+        "type": "float"
+      },
+      {
+        "name": "Kill",
+        "description": "Removes this entity from the world.",
+        "type": "void"
+      },
+      {
+        "name": "KillHierarchy",
+        "description": "Removes this entity and all its children from the world.",
+        "type": "void"
+      },
+      {
+        "name": "AddOutput",
+        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
+        "type": "string"
+      },
+      {
+        "name": "FireUser1",
+        "description": "Causes this entity's OnUser1 output to be fired.",
+        "type": "void"
+      },
+      {
+        "name": "FireUser2",
+        "description": "Causes this entity's OnUser2 output to be fired.",
+        "type": "void"
+      },
+      {
+        "name": "FireUser3",
+        "description": "Causes this entity's OnUser3 output to be fired.",
+        "type": "void"
+      },
+      {
+        "name": "FireUser4",
+        "description": "Causes this entity's OnUser4 output to be fired.",
+        "type": "void"
+      },
+      {
+        "name": "SetDamageFilter",
+        "description": "Sets the entity to use as damage filter. Pass in an empty string to clear the damage filter.",
+        "type": "string"
+      },
+      {
+        "name": "DisableShadow",
+        "description": "Turn shadow off.",
+        "type": "void"
+      },
+      {
+        "name": "EnableShadow",
+        "description": "Turn shadow on.",
+        "type": "void"
+      },
+      {
+        "name": "Alpha",
+        "description": "Set the sprite's alpha (0 - 255).",
+        "type": "integer"
+      },
+      {
+        "name": "Color",
+        "description": "Set the sprite's color (R G B).",
+        "type": "color255"
+      },
+      {
+        "name": "Enable",
+        "description": "Enable this entity.",
+        "type": "void"
+      },
+      {
+        "name": "Disable",
+        "description": "Disable this entity.",
+        "type": "void"
       }
     ]
   },
@@ -87091,6 +87814,25 @@
         }
       },
       {
+        "type": "target_source",
+        "name": "targetname",
+        "title": "Name",
+        "description": "The name that other entities refer to this entity by."
+      },
+      {
+        "type": "string",
+        "name": "effects",
+        "title": "Effect flags",
+        "description": "For configuring visual effects.",
+        "deflt": "0"
+      },
+      {
+        "type": "target_destination",
+        "name": "parentname",
+        "title": "Parent",
+        "description": "The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent."
+      },
+      {
         "type": "angle",
         "name": "angles",
         "title": "Pitch Yaw Roll (Y Z X)",
@@ -87187,6 +87929,26 @@
         "name": "OnScriptEvent08",
         "description": "Fires when a 'trigger' anim event occurs while playing the script. Use { event 1003 framenum 8 } in the QC.",
         "type": "void"
+      },
+      {
+        "name": "OnUser1",
+        "description": "Fired in response to FireUser1 input.",
+        "type": "void"
+      },
+      {
+        "name": "OnUser2",
+        "description": "Fired in response to FireUser2 input.",
+        "type": "void"
+      },
+      {
+        "name": "OnUser3",
+        "description": "Fired in response to FireUser3 input.",
+        "type": "void"
+      },
+      {
+        "name": "OnUser4",
+        "description": "Fired in response to FireUser4 input.",
+        "type": "void"
       }
     ],
     "inputs": [
@@ -87203,6 +87965,61 @@
       {
         "name": "CancelSequence",
         "description": "Stops the scripted sequence. If fired after a sequence starts, this input will not take effect until the NPC finishes playing the scripted action animation.",
+        "type": "void"
+      },
+      {
+        "name": "Kill",
+        "description": "Removes this entity from the world.",
+        "type": "void"
+      },
+      {
+        "name": "KillHierarchy",
+        "description": "Removes this entity and all its children from the world.",
+        "type": "void"
+      },
+      {
+        "name": "AddOutput",
+        "description": "Adds an entity I/O connection to this entity. Format: <output name> <targetname>:<inputname>:<parameter>:<delay>:<max times to fire (-1 == infinite)>. Very dangerous, use with care.",
+        "type": "string"
+      },
+      {
+        "name": "FireUser1",
+        "description": "Causes this entity's OnUser1 output to be fired.",
+        "type": "void"
+      },
+      {
+        "name": "FireUser2",
+        "description": "Causes this entity's OnUser2 output to be fired.",
+        "type": "void"
+      },
+      {
+        "name": "FireUser3",
+        "description": "Causes this entity's OnUser3 output to be fired.",
+        "type": "void"
+      },
+      {
+        "name": "FireUser4",
+        "description": "Causes this entity's OnUser4 output to be fired.",
+        "type": "void"
+      },
+      {
+        "name": "SetParent",
+        "description": "Changes the entity's parent in the movement hierarchy.",
+        "type": "string"
+      },
+      {
+        "name": "SetParentAttachment",
+        "description": "Change this entity to attach to a specific attachment point on its parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment.",
+        "type": "string"
+      },
+      {
+        "name": "SetParentAttachmentMaintainOffset",
+        "description": "Change this entity to attach to a specific attachment point on it's parent. Entities must be parented before being sent this input. The parameter passed in should be the name of the attachment. The entity will maintain it's position relative to the parent at the time it is attached.",
+        "type": "string"
+      },
+      {
+        "name": "ClearParent",
+        "description": "Removes this entity from the the movement hierarchy, leaving it free to move independently.",
         "type": "void"
       }
     ]
