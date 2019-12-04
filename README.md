@@ -1,5 +1,5 @@
 # fgd
-parses FGD files into JSON
+parses Valve FGD files into JSON
 
 Output example:
 ```json
